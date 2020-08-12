@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/src/R.dart';
 import 'package:flutter_app/src/connector/core/Connector.dart';
 import 'package:flutter_app/src/connector/core/ConnectorParameter.dart';
+import 'package:flutter_app/src/costants/Constants.dart';
 import 'package:flutter_app/src/providers/AppProvider.dart';
 import 'package:flutter_app/src/store/Model.dart';
-import 'file:///C:/Users/Morris/Desktop/NTUTCourseHelper-Flutter/lib/src/costants/Constants.dart';
 import 'package:flutter_app/ui/other/MyToast.dart';
 import 'package:flutter_ijkplayer/flutter_ijkplayer.dart';
 import 'package:html/dom.dart' as dom;
@@ -59,8 +59,8 @@ class _VideoPlayer extends State<ClassVideoPlayer> {
     String xml = await Connector.getDataByGet(parameter);
     dom.Document tagNode = parse(xml);
     dom.Element node = tagNode.getElementsByTagName("item").first;
-    String title = node.getElementsByTagName("title").first.text;
-    String description = node.getElementsByTagName("description").first.text;
+    //String title = node.getElementsByTagName("title").first.text;
+    //String description = node.getElementsByTagName("description").first.text;
     String presenterVideo =
         node.getElementsByTagName("presenter_video").first.text;
     String presenterVideo2 =
